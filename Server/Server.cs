@@ -255,9 +255,9 @@ public class Server {
                     });
 
                     Logger.Info($"Client {client.Name} ({client.Id}/{socket.RemoteEndPoint}) connected.");
-                } else if (header.Id != client.Id && client.Id != Guid.Empty) {
-                    throw new Exception($"Client {client.Name} sent packet with invalid client id {header.Id} instead of {client.Id}");
-                }
+                //} else if (header.Id != client.Id && client.Id != Guid.Empty) {
+                //    throw new Exception($"Client {client.Name} sent packet with invalid client id {header.Id} instead of {client.Id}");
+                //}
 
                 if (header.Type == PacketType.Costume) {
                     CostumePacket costumePacket = new CostumePacket {
